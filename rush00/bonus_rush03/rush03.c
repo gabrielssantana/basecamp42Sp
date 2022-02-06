@@ -6,7 +6,7 @@
 /*   By: gasantos <gasantos@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/04 23:50:16 by bbonaldi          #+#    #+#             */
-/*   Updated: 2022/02/05 19:51:29 by gasantos         ###   ########.fr       */
+/*   Updated: 2022/02/06 22:39:05 by gasantos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,60 +14,60 @@ void	ft_putchar(char c);
 void	rush(int x, int y);
 
 typedef struct t_characters {
-	char	first;
-	char	second;
-	char	third;
+	char	fst;
+	char	scd;
+	char	trd;
 }	t_characters;
 
-void	ft_start_end_print(t_characters chars, int l, int columns)
+void	ft_start_end_print(t_characters chars, int col_pos, int columns)
 {
-	if (l == 0)
+	if (col_pos == 0)
 	{
-		ft_putchar(chars.first);
+		ft_putchar(chars.fst);
 	}
-	else if (l == columns -1)
+	else if (col_pos == columns - 1)
 	{
-		ft_putchar(chars.third);
+		ft_putchar(chars.trd);
 	}
 	else
 	{
-		ft_putchar(chars.second);
+		ft_putchar(chars.scd);
 	}
 }
 
 void	ft_print_row(t_characters chars, int columns)
 {
-	int	i;
+	int	col_pos;
 
-	i = 0;
-	while (i < columns)
+	col_pos = 0;
+	while (col_pos < columns)
 	{
-		ft_start_end_print(chars, i, columns);
-		i++;
+		ft_start_end_print(chars, col_pos, columns);
+		col_pos++;
 	}
 	ft_putchar('\n');
 }
 
-void	ft_init_struct(t_characters *chars, char first, char second, char third)
+void	ft_init_struct(t_characters *chars, char fst, char scd, char trd)
 {
-	chars->first = first;
-	chars->second = second;
-	chars->third = third;
+	chars->fst = fst;
+	chars->scd = scd;
+	chars->trd = trd;
 }
 
 void	rush(int x, int y)
 {
 	int				k;
-	t_characters	first_row;
+	t_characters	fst_row;
 	t_characters	middle_row;
 	t_characters	last_row;
 
-	ft_init_struct(&first_row, 'A', 'B', 'C');
+	ft_init_struct(&fst_row, 'A', 'B', 'C');
 	ft_init_struct(&middle_row, 'B', ' ', 'B');
 	ft_init_struct(&last_row, 'A', 'B', 'C');
 	if (y > 0)
 	{
-		ft_print_row(first_row, x);
+		ft_print_row(fst_row, x);
 	}
 	k = 0;
 	while (k < (y -2))

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   rush02.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bbonaldi <bbonaldi@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: gasantos <gasantos@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/04 23:50:16 by bbonaldi          #+#    #+#             */
-/*   Updated: 2022/02/05 18:40:33 by bbonaldi         ###   ########.fr       */
+/*   Updated: 2022/02/06 23:12:32 by gasantos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,45 +14,45 @@ void	ft_putchar(char c);
 void	rush(int x, int y);
 
 typedef struct t_characters {
-	char	first;
-	char	second;
-	char	third;
+	char	fst;
+	char	scd;
+	char	trd;
 }	t_characters;
 
-void	ft_start_end_print(t_characters chars, int l, int columns)
+void	ft_start_end_print(t_characters chars, int col_pos, int columns)
 {
-	if (l == 0)
+	if (col_pos == 0)
 	{
-		ft_putchar(chars.first);
+		ft_putchar(chars.fst);
 	}
-	else if (l == columns -1)
+	else if (col_pos == columns - 1)
 	{
-		ft_putchar(chars.third);
+		ft_putchar(chars.trd);
 	}
 	else
 	{
-		ft_putchar(chars.second);
+		ft_putchar(chars.scd);
 	}
 }
 
 void	ft_print_row(t_characters chars, int columns)
 {
-	int	i;
+	int	col_pos;
 
-	i = 0;
-	while (i < columns)
+	col_pos = 0;
+	while (col_pos < columns)
 	{
-		ft_start_end_print(chars, i, columns);
-		i++;
+		ft_start_end_print(chars, col_pos, columns);
+		col_pos++;
 	}
 	ft_putchar('\n');
 }
 
-void	ft_init_struct(t_characters *chars, char first, char second, char third)
+void	ft_init_struct(t_characters *chars, char fst, char scd, char trd)
 {
-	chars->first = first;
-	chars->second = second;
-	chars->third = third;
+	chars->fst = fst;
+	chars->scd = scd;
+	chars->trd = trd;
 }
 
 void	rush(int x, int y)
@@ -78,5 +78,5 @@ void	rush(int x, int y)
 	if (y > 1)
 	{
 		ft_print_row(last_row, x);
-	}	
+	}
 }
