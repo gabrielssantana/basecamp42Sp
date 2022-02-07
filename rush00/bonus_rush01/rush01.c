@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   rush01.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vpretti <vpretti@student.42sp.org.br>      +#+  +:+       +#+        */
+/*   By: gasantos <gasantos@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/04 23:50:16 by bbonaldi          #+#    #+#             */
-/*   Updated: 2022/02/06 23:56:56 by vpretti          ###   ########.fr       */
+/*   Updated: 2022/02/07 02:15:10 by gasantos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	ft_putchar(char c);
-void	rush(int x, int y);
 
 typedef struct s_characters {
 	char	fst;
