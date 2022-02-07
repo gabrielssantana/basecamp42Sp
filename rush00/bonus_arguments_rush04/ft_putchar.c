@@ -1,19 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vpretti <vpretti@student.42sp.org.br>      +#+  +:+       +#+        */
+/*   By: bbonaldi <bbonaldi@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/05 02:07:43 by bbonaldi          #+#    #+#             */
-/*   Updated: 2022/02/06 23:30:40 by vpretti          ###   ########.fr       */
+/*   Created: 2022/02/05 01:55:16 by bbonaldi          #+#    #+#             */
+/*   Updated: 2022/02/05 02:07:13 by bbonaldi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	rush(int x, int y);
+#include <unistd.h>
 
-int	main(void)
+void	ft_putchar(char c)
 {
-	rush(5, 3);
-	return (0);
+	write(1, &c, 1);
 }
