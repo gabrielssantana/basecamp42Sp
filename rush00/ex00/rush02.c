@@ -6,7 +6,7 @@
 /*   By: gasantos <gasantos@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/04 23:50:16 by bbonaldi          #+#    #+#             */
-/*   Updated: 2022/02/07 02:58:02 by gasantos         ###   ########.fr       */
+/*   Updated: 2022/02/07 19:14:07 by gasantos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,19 +32,13 @@ void	ft_start_end_print(t_characters chars, int col_pos, int columns)
 {
 //valida se é a primeira coluna e coloca o primeiro caracter
 	if (col_pos == 0)
-	{
 		ft_putchar(chars.fst);
-	}
 //valida se é a última coluna e coloca o último caracter
 	else if (col_pos == columns - 1)
-	{
 		ft_putchar(chars.trd);
-	}
 //se não for nenhum dos casos acima com certeza será um caracter que deve estar nas colunas do meio
 	else
-	{
 		ft_putchar(chars.scd);
-	}
 }
 
 //função que controla a escrita das linhas
@@ -54,13 +48,10 @@ void	ft_print_row(t_characters chars, int columns)
 	int	col_pos;
 
 //inicialização com valor 0 da variável col_pos
-	col_pos = 0;
+	col_pos = -1;
 //loop para inserir cada caracter de cada linha
-	while (col_pos < columns)
-	{
+	while (++ col_pos < columns)
 		ft_start_end_print(chars, col_pos, columns);
-		col_pos++;
-	}
 	ft_putchar('\n');
 }
 
@@ -91,20 +82,13 @@ void	rush(int x, int y)
 
 //valida se foi passado ao menos uma linha para ser impressa pelo programa e escreve a linha de cabeçalho no console
 	if (y > 0)
-	{
 		ft_print_row(first_row, x);
-	}
 // inicialização com valor 0 da variável k, isto poderia ter sido inicializado logo abaixo da declaração das structs
-	k = 0;
+	k = -1;
 //valida se há linhas do meio e se houver escreve no console
-	while (k < (y - 2))
-	{
+	while (++ k < (y - 2))
 		ft_print_row(middle_row, x);
-		k++;
-	}
 //valida se há mais de uma linha e se houver imprime a linha de rodapé após serem escritas todas as linhas do meio, se houverem
 	if (y > 1)
-	{
 		ft_print_row(last_row, x);
-	}
 }
