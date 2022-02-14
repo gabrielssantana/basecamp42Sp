@@ -1,5 +1,5 @@
 link do towers: https://www.chiark.greenend.org.uk/~sgtatham/puzzles/js/towers.html
-towers 4:2/2/1/2/2/3/4/1/2/2/1/2/2/3/4/1
+towers: 4:2/2/1/2/2/3/4/1/2/2/1/2/2/3/4/1
 compilar: gcc -Wall -Werror -Wextra *.c -o rush-01
 executar: ./rush-01 "2 2 1 2 2 3 4 1 2 2 1 2 2 3 4 1"
 
