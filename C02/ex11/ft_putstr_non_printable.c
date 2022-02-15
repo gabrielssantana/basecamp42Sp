@@ -1,29 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_putstr_non_printable.c                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gasantos <gasantos@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/09 19:47:19 by gasantos          #+#    #+#             */
-/*   Updated: 2022/02/15 18:33:41 by gasantos         ###   ########.fr       */
+/*   Created: 2022/02/15 15:30:01 by gasantos          #+#    #+#             */
+/*   Updated: 2022/02/15 18:09:09 by gasantos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include <unistd.h>
 
-char	*ft_strncpy(char *dest, char *src, unsigned int n);
-
-int	main(void)
+void	ft_hex(char num)
 {
-	char	src[9];
-	char	copia[9];
-	char	copia2[9];
+	char	*hexx;
 
-	strcpy(src, "bundinha");
-	ft_strncpy(copia, src, 8);
-	strncpy(copia2, src, 8);
-	puts(copia);
-	puts(copia2);
+	hexx = "0123456789abcdef";
+	write(1, &hexx[num / 16], 1);
+	write(1, &hexx[num % 16], 1);
+}
+
+void	ft_putstr_non_printable(char *str)
+{
+	int	length;
+
+	length = -1;
+	while (str[++length])
+	{
+		if (str[length] >= 0 && str[length] <= 31)
+		{
+			write(1, "\\", 1);
+			ft_hex(str[length]);
+		}
+		else
+			write(1, &str[length], 1);
+	}
 }

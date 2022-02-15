@@ -6,17 +6,17 @@
 /*   By: gasantos <gasantos@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 18:39:50 by gasantos          #+#    #+#             */
-/*   Updated: 2022/02/12 14:24:34 by gasantos         ###   ########.fr       */
+/*   Updated: 2022/02/15 15:20:13 by gasantos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strcpy(char *dest, char *src)
 {
-	int	i;
+	int	length;
 
-	i = -1;
-	while (src[++i])
-		dest[i] = src[i];
-	dest[i] = src[i];
+	length = -1;
+	while (src[++length])
+		dest[length] = src[length];
+	dest[length] = src[length];
 	return (dest);
 }

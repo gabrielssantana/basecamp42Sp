@@ -5,25 +5,17 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: gasantos <gasantos@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/09 19:47:19 by gasantos          #+#    #+#             */
-/*   Updated: 2022/02/15 18:33:41 by gasantos         ###   ########.fr       */
+/*   Created: 2022/02/15 18:09:52 by gasantos          #+#    #+#             */
+/*   Updated: 2022/02/15 18:13:34 by gasantos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
-
-char	*ft_strncpy(char *dest, char *src, unsigned int n);
+void	ft_putstr_non_printable(char *str);
 
 int	main(void)
 {
-	char	src[9];
-	char	copia[9];
-	char	copia2[9];
+	char	*str;
 
-	strcpy(src, "bundinha");
-	ft_strncpy(copia, src, 8);
-	strncpy(copia2, src, 8);
-	puts(copia);
-	puts(copia2);
+	str = "Oi\nvoce esta bem?";
+	ft_putstr_non_printable(str);
 }
