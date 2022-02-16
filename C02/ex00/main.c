@@ -6,7 +6,7 @@
 /*   By: gasantos <gasantos@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 18:39:59 by gasantos          #+#    #+#             */
-/*   Updated: 2022/02/15 18:27:09 by gasantos         ###   ########.fr       */
+/*   Updated: 2022/02/16 16:10:47 by gasantos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,6 @@ int	main(void)
 
 	puts(ft_strcpy(copia, "stringenorme"));
 	puts(copia);
-	puts(ft_strcpy(copia2, "stringenorme"));
+	strcpy(copia2, "stringenorme");
 	puts(copia2);
 }

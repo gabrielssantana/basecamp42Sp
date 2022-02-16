@@ -6,7 +6,7 @@
 /*   By: gasantos <gasantos@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/15 15:30:01 by gasantos          #+#    #+#             */
-/*   Updated: 2022/02/15 18:09:09 by gasantos         ###   ########.fr       */
+/*   Updated: 2022/02/16 16:04:14 by gasantos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ void	ft_putstr_non_printable(char *str)
 			write(1, "\\", 1);
 			ft_hex(str[length]);
 		}
-		else
+		else if (str[length] >= ' ' && str[length] <= '~')
 			write(1, &str[length], 1);
 	}
 }

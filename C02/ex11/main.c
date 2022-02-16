@@ -6,7 +6,7 @@
 /*   By: gasantos <gasantos@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/15 18:09:52 by gasantos          #+#    #+#             */
-/*   Updated: 2022/02/15 18:13:34 by gasantos         ###   ########.fr       */
+/*   Updated: 2022/02/16 16:05:33 by gasantos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,6 @@ int	main(void)
 {
 	char	*str;
 
-	str = "Oi\nvoce esta bem?";
+	str = "Oi\nvoce esçta bem?";
 	ft_putstr_non_printable(str);
 }

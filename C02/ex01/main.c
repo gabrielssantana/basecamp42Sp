@@ -6,7 +6,7 @@
 /*   By: gasantos <gasantos@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/09 19:47:19 by gasantos          #+#    #+#             */
-/*   Updated: 2022/02/15 18:33:41 by gasantos         ###   ########.fr       */
+/*   Updated: 2022/02/16 17:24:19 by gasantos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,12 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n);
 int	main(void)
 {
 	char	src[9];
-	char	copia[9];
-	char	copia2[9];
+	char	copia[255];
+	char	copia2[255];
 
 	strcpy(src, "bundinha");
-	ft_strncpy(copia, src, 8);
-	strncpy(copia2, src, 8);
+	ft_strncpy(copia, src, 5);
+	strncpy(copia2, src, 5);
 	puts(copia);
 	puts(copia2);
 }
