@@ -6,10 +6,11 @@
 /*   By: gasantos <gasantos@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/15 15:30:01 by gasantos          #+#    #+#             */
-/*   Updated: 2022/02/17 13:19:01 by gasantos         ###   ########.fr       */
+/*   Updated: 2022/02/17 14:14:06 by gasantos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+//Não passou na Moulinette, CORRIGIR
 #include <unistd.h>
 
 void	ft_hex(char num)

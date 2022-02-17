@@ -1,21 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gasantos <gasantos@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/11 16:48:49 by gasantos          #+#    #+#             */
-/*   Updated: 2022/02/17 15:59:31 by gasantos         ###   ########.fr       */
+/*   Created: 2022/02/16 22:42:09 by gasantos          #+#    #+#             */
+/*   Updated: 2022/02/17 18:07:17 by gasantos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strcmp(char *s1, char *s2)
-{
-	int	i;
+#include <stdio.h>
+#include <bsd/string.h>
 
-	i = 0;
-	while (s1[i] == s2[i] && s1[i])
-		i++;
-	return (s1[i] - s2[i]);
+unsigned int	ft_strlcat(char *dest, char *src, unsigned int size);
+
+int	main(void)
+{
+	int		c;
+	int		d;
+	char	*e;
+	char	*f;
+
+	e = "World";
+	f = "World";
+	c = ft_strlcat(e, "Hello ", 0);
+	d = strlcat(f, "Hello ", 0);
+	printf("%s ", e);
+	printf("%d", c);
+	printf("\n%s ", f);
+	printf("%d", d);
 }

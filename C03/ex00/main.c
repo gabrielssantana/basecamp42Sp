@@ -1,21 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gasantos <gasantos@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/11 16:48:49 by gasantos          #+#    #+#             */
-/*   Updated: 2022/02/17 15:59:31 by gasantos         ###   ########.fr       */
+/*   Created: 2022/02/11 22:51:27 by gasantos          #+#    #+#             */
+/*   Updated: 2022/02/17 17:36:28 by gasantos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strcmp(char *s1, char *s2)
-{
-	int	i;
+#include <stdio.h>
+#include <string.h>
 
-	i = 0;
-	while (s1[i] == s2[i] && s1[i])
-		i++;
-	return (s1[i] - s2[i]);
+int	ft_strcmp(char *s1, char *s2);
+
+int	main(void)
+{
+	char	*c;
+	char	*d;
+
+	c = "Hello";
+	d = "Hello";
+	printf("%s\n", c);
+	printf("%d\n", ft_strcmp(c, "Hel"));
+	printf("%s\n", d);
+	printf("%d\n", strcmp(d, "Hel"));
 }

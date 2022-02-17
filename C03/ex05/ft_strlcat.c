@@ -6,7 +6,7 @@
 /*   By: gasantos <gasantos@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/16 22:15:39 by gasantos          #+#    #+#             */
-/*   Updated: 2022/02/16 22:40:49 by gasantos         ###   ########.fr       */
+/*   Updated: 2022/02/17 17:48:04 by gasantos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,11 +31,8 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 	length = 0;
 	if (size == 0)
 		return (src_len);
-	while (src[length] && (dest_len + length) < (size - 1))
-	{
+	while (src[length++] && (dest_len + length) < (size - 1))
 		dest[length + dest_len] = src[length];
-		length++;
-	}
 	if (length < size)
 		dest[dest_len + length] = '\0';
 	if (dest_len > size)
