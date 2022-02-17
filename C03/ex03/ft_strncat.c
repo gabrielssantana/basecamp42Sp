@@ -1,35 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_strncat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gasantos <gasantos@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/08 01:19:09 by gasantos          #+#    #+#             */
-/*   Updated: 2022/02/14 20:47:11 by gasantos         ###   ########.fr       */
+/*   Created: 2022/02/16 22:15:52 by gasantos          #+#    #+#             */
+/*   Updated: 2022/02/16 22:44:14 by gasantos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putchar(char c)
+char	*ft_strncat(char *dest, char *src, unsigned int nb)
 {
-	write(1, &c, 1);
-}
+	int				dest_length;
+	int				src_length;
+	unsigned int	length;
 
-void	ft_putnbr(int nb)
-{
-	if (nb == -2147483648)
-	{
-		write(1, "-2147483648", 11);
-		return ;
-	}
-	if (nb < 0)
-	{
-		ft_putchar('-');
-		nb = -nb;
-	}
-	if (nb > 9)
-		ft_putnbr(nb / 10);
-	ft_putchar(nb % 10 + '0');
+	dest_length = 0;
+	src_length = -1;
+	length = 0;
+	while (dest[dest_length])
+		dest_length++;
+	while (src[++src_length] && length++ < nb)
+		dest[dest_length++] = src[src_length];
+	dest[dest_length] = '\0';
+	return (dest);
 }
