@@ -6,7 +6,7 @@
 /*   By: gasantos <gasantos@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/11 22:51:27 by gasantos          #+#    #+#             */
-/*   Updated: 2022/02/17 18:13:56 by gasantos         ###   ########.fr       */
+/*   Updated: 2022/02/18 17:51:02 by gasantos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,10 @@ int	main(void)
 	char	*c;
 	char	*d;
 
-	c = "Hello";
-	d = "Hello";
+	c = "Hel";
+	d = "Hel";
 	printf("%s\n", c);
-	printf("%d\n", ft_strcmp(c, "Hel"));
+	printf("%d\n", ft_strcmp(c, "Hello"));
 	printf("%s\n", d);
-	printf("%d\n", strcmp(d, "Hel"));
+	printf("%d\n", strcmp(d, "Hello"));
 }

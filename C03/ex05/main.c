@@ -6,7 +6,7 @@
 /*   By: gasantos <gasantos@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/16 22:42:09 by gasantos          #+#    #+#             */
-/*   Updated: 2022/02/17 19:12:02 by gasantos         ###   ########.fr       */
+/*   Updated: 2022/02/18 20:50:48 by gasantos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ int	main(void)
 
 	strcpy(e, "Hello");
 	strcpy(f, "Hello");
-	c = ft_strlcat(e, " World ",13);
-	d = strlcat(f, " World ",13);
+	c = ft_strlcat(e, " World ", 7);
+	d = strlcat(f, " World ", 7);
 	printf("%s", e);
 	printf("%d", c);
 	printf("\n%s", f);

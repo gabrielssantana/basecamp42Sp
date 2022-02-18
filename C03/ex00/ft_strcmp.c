@@ -6,7 +6,7 @@
 /*   By: gasantos <gasantos@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/11 16:48:49 by gasantos          #+#    #+#             */
-/*   Updated: 2022/02/17 18:10:01 by gasantos         ###   ########.fr       */
+/*   Updated: 2022/02/18 19:49:25 by gasantos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@ int	ft_strcmp(char *s1, char *s2)
 	int	i;
 
 	i = 0;
-	while (s1[i] == s2[i] && (s1[i] || s2[i]))
+	while (s1[i] == s2[i] && s1[i])
 		i++;
 	return (s1[i] - s2[i]);
 }

@@ -6,9 +6,11 @@
 /*   By: gasantos <gasantos@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/16 20:33:48 by gasantos          #+#    #+#             */
-/*   Updated: 2022/02/16 22:43:12 by gasantos         ###   ########.fr       */
+/*   Updated: 2022/02/18 20:49:22 by gasantos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+//INCORRETO, PRECISO CONSERTAR
 
 char	*ft_strstr(char *str, char *to_find)
 {
