@@ -1,33 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gasantos <gasantos@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/16 22:42:09 by gasantos          #+#    #+#             */
-/*   Updated: 2022/02/17 19:12:02 by gasantos         ###   ########.fr       */
+/*   Created: 2022/02/17 18:45:40 by gasantos          #+#    #+#             */
+/*   Updated: 2022/02/18 16:45:23 by gasantos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <bsd/string.h>
-
-unsigned int	ft_strlcat(char *dest, char *src, unsigned int size);
-
-int	main(void)
+int	ft_atoi(char *str)
 {
-	int		c;
-	int		d;
-	char	e[13];
-	char	f[13];
+	int	len;
+	int	nbr;
+	int	nbr_neg;
 
-	strcpy(e, "Hello");
-	strcpy(f, "Hello");
-	c = ft_strlcat(e, " World ",13);
-	d = strlcat(f, " World ",13);
-	printf("%s", e);
-	printf("%d", c);
-	printf("\n%s", f);
-	printf("%d", d);
+	len = 0;
+	nbr = 0;
+	nbr_neg = 0;
+	while (str[len] && str[len] <= ' ')
+		len++;
+	while (str[len] == '-' || str[len] == '+')
+		if (str[len++] == '-')
+			nbr_neg++;
+	while (str[len] >= '0' && str[len] <= '9')
+		nbr = nbr * 10 + (str[len++] - '0');
+	if (nbr_neg % 2 == 1)
+		return (nbr * -1);
+	return (nbr);
 }

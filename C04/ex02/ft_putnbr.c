@@ -1,33 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gasantos <gasantos@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/16 22:42:09 by gasantos          #+#    #+#             */
-/*   Updated: 2022/02/17 19:12:02 by gasantos         ###   ########.fr       */
+/*   Created: 2022/02/17 18:45:46 by gasantos          #+#    #+#             */
+/*   Updated: 2022/02/18 01:36:08 by gasantos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <bsd/string.h>
+#include <unistd.h>
 
-unsigned int	ft_strlcat(char *dest, char *src, unsigned int size);
-
-int	main(void)
+void	ft_putchar(char c)
 {
-	int		c;
-	int		d;
-	char	e[13];
-	char	f[13];
+	write(1, &c, 1);
+}
 
-	strcpy(e, "Hello");
-	strcpy(f, "Hello");
-	c = ft_strlcat(e, " World ",13);
-	d = strlcat(f, " World ",13);
-	printf("%s", e);
-	printf("%d", c);
-	printf("\n%s", f);
-	printf("%d", d);
+void	ft_print(unsigned int nb)
+{
+	if (nb > 9)
+		ft_print(nb / 10);
+	ft_putchar(nb % 10 + '0');
+}
+
+void	ft_putnbr(int nb)
+{
+	if (nb < 0)
+	{
+		ft_putchar('-');
+		ft_print(-nb);
+	}
+	else
+		ft_print(nb);
 }
