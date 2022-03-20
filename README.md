@@ -1,4 +1,4 @@
-# Big Game Survey 
+# Basecamp 42SP
 [![NPM](https://img.shields.io/npm/l/react)](https://github.com/gabrielssantana/basecamp42Sp/blob/main/LICENSE) 
 
 # Sobre o projeto
